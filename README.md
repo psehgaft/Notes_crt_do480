@@ -21,29 +21,6 @@ Override the image for a specific environment
 Add a namePrefix
 Deploy an application from git, from 2 different branches (dev and prod)
 
-```yml
-#Production
-apiVersion: kustomize.config.ks8.io/v1beta1
-kind: Kustomization
- commonLabels:
-  app: prod-todolist.js
-
-#path to base directory
-bases:
-- ../../base
-
-resources:
-- pvclaim,yml
-
-#Add name prefix "prod"
-namePrefix: prod-
-
-#Production
-patchesStrategicMerge:
-  - pvc.yaml
-```
-
-
 
 ```yml
 #Development
@@ -70,6 +47,13 @@ images:
 #Add name prefix "dev"
 namePrefix: dev-
 ```
+
+Kustomize
+
+```sh
+kubectl kustomize overlays/development/
+```
+
 
 # ACS - how to import cluster
 
