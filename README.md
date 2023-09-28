@@ -67,3 +67,9 @@ images:
 #Add name prefix "dev"
 namePrefix: dev-
 ```
+
+# ACS - how to import cluster
+
+# Create and configure Syslog integration
+
+#  Make image show up via "Scanning via watch tag"
