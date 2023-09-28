@@ -16,6 +16,10 @@ kind: Kustomization
 bases:
 - ../../base
 
+resources:
+- pvclaim,yml
+- route.yml
+
 #Production
 images:
   - name: mysql-db-image
@@ -42,6 +46,10 @@ commonLabels:
 #path to base directory
 bases:
   - ../../base
+
+resources:
+- pvclaim,yml
+- route.yml
 
 #Development
 images:
