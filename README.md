@@ -3,6 +3,18 @@ Notes_crt_do480
 
 # Multicluster Application Resource Management with RHACM
 
+## Users
+
+Roles
+
+open-cluster-management:managedclusterset:admin:clusterset_name
+open-cluster-management:managedclusterset:view:clusterset_name
+
+```sh
+oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:admin:prod user
+
+oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:view:dev user
+```
 
 # Customizing resources with Kustomize for RHACM
 
@@ -24,13 +36,6 @@ bases:
 
 resources:
 - pvclaim,yml
-- route.yml
-
-#Production
-images:
-  - name: mysql-db-image
-    newName: quay.io/example/todo-single
-    newTag: v1.1
 
 #Add name prefix "prod"
 namePrefix: prod-
