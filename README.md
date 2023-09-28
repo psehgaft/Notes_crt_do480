@@ -6,6 +6,11 @@ Notes_crt_do480
 
 # Customizing resources with Kustomize for RHACM
 
+Kustomize from scratch
+Override the image for a specific environment
+Add a namePrefix
+Deploy an application from git, from 2 different branches (dev and prod)
+
 ```yml
 #Production
 apiVersion: kustomize.config.ks8.io/v1beta1
