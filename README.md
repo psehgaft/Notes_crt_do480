@@ -8,6 +8,7 @@ Notes_crt_do480
 
 ```yml
 #Production
+apiVersion: kustomize.config.ks8.io/v1beta1
 kind: Kustomization
  commonLabels:
   app: prod-todolist.js
@@ -38,6 +39,7 @@ patchesStrategicMerge:
 
 ```yml
 #Development
+apiVersion: kustomize.config.ks8.io/v1beta1
 kind: Kustomization
 #Development
 commonLabels:
