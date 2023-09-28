@@ -7,13 +7,11 @@ Notes_crt_do480
 
 Roles
 
-open-cluster-management:managedclusterset:admin:clusterset_name
-open-cluster-management:managedclusterset:view:clusterset_name
-
 ```sh
-oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:admin:prod user
+oc adm policy add-cluster-role-to-user view user
 
-oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:view:dev user
+oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:admin:prod user
+oc adm policy add-cluster-role-to-user open-cluster-management:managedclusterset:view:prod user
 ```
 
 # Customizing resources with Kustomize for RHACM
